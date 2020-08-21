@@ -25,11 +25,14 @@ pub use crate::{
     room_version_id::RoomVersionId,
     server_key_id::ServerKeyId,
     server_name::{ServerName, ServerNameBox},
+    signing_key_id::SigningKeyId,
     user_id::UserId,
 };
 #[doc(inline)]
 pub use ruma_identifiers_validation::{
-    crypto_algorithms::{DeviceKeyAlgorithm, EventEncryptionAlgorithm, ServerKeyAlgorithm},
+    crypto_algorithms::{
+        DeviceKeyAlgorithm, EventEncryptionAlgorithm, ServerKeyAlgorithm, SigningKeyAlgorithm,
+    },
     error::Error,
 };
 
@@ -47,6 +50,7 @@ mod room_id_or_room_alias_id;
 mod room_version_id;
 mod server_key_id;
 mod server_name;
+mod signing_key_id;
 
 /// Check whether a given string is a valid server name according to [the specification][].
 ///
