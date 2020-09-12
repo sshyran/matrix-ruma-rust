@@ -35,6 +35,7 @@ ruma_api! {
         /// List of persistent updates to rooms.
         ///
         /// Must not be more than 50 items.
+        #[serde(default, skip_serializing_if = "<[_]>::is_empty")]
         pub pdus: &'a [Raw<Pdu>],
 
         /// List of ephemeral messages.
